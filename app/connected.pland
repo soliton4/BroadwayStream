@@ -3,7 +3,10 @@ var server = require "./server";
 
 var Player = require "Broadway/Player/Player";
 
-var player = new Player();
+var player = new Player({
+  useWorker: true,
+  workerFile: "Broadway/Player/Decoder.js"
+});
 
 document.body.appendChild(player.canvas);
 

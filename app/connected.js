@@ -13,9 +13,9 @@ var __requireFun = function(parModule){
         }, function(err){ returnPromise.reject(err); });
       }catch(e){ returnPromise.reject(e); };
       return returnPromise.promise;};
-    if (promiseland._hasModule({ hashStr: "40324c5af51370eefba09b0093e7ae57" })){ return promiseland._getModule("40324c5af51370eefba09b0093e7ae57"); };
+    if (promiseland._hasModule({ hashStr: "4cf1f12e3419e986c72f8de451cc32ac" })){ return promiseland._getModule("4cf1f12e3419e986c72f8de451cc32ac"); };
 var PL$1 = new __Promise();
-promiseland._registerModule({ hashStr: "40324c5af51370eefba09b0093e7ae57", "module": PL$1, promising: true });
+promiseland._registerModule({ hashStr: "4cf1f12e3419e986c72f8de451cc32ac", "module": PL$1, promising: true });
 var PL$10/*document*/;try{PL$10/*document*/ = document;}catch(e){};
 var PL$14/*window*/;try{PL$14/*window*/ = window;}catch(e){};
 var PL$17/*Uint8Array*/;try{PL$17/*Uint8Array*/ = Uint8Array;}catch(e){};
@@ -42,7 +42,10 @@ PL$3/*promiseland exception catcher*/(function(){
   ;
   __requireFun("./server").then(PL$3/*promiseland exception catcher*/(function(PL$6){PL$5/*server*/ = PL$6;
   __requireFun("Broadway/Player/Player").then(PL$3/*promiseland exception catcher*/(function(PL$8){PL$7/*Player*/ = PL$8;
-  PL$9/*player*/ = new PL$7/*Player*/();
+  PL$9/*player*/ = new PL$7/*Player*/({
+    "useWorker": true,
+    "workerFile": "Broadway/Player/Decoder.js"
+  });
   PL$10/*document*/["body"]["appendChild"](PL$9/*player*/["canvas"]);
   PL$11/*toUint8Array*/ = (function(PL$12/*parStr*/){
   

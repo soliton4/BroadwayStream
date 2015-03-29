@@ -1,5 +1,7 @@
 node_modules
 release
 tempstuff
-./*.log
+*.log
 av2pass*
+ffmpeg2pass-0.log
+x264_2pass*
