@@ -1,0 +1,43 @@
+try{
+  var Fw = require("promiseland-webframework");
+  var program = require('commander');
+
+  program
+    .version('0.0.1')
+    .option('-p, --port [number]', 'port number')
+    .option('-f, --file [path]', 'filename of video file')
+    .parse(process.argv);
+
+  
+  var dirs = [
+    "app",
+    "Broadway"
+  ];
+  
+  var i = 0;
+  for (i = 0; i < dirs.length; ++i){
+    dirs[i] = {
+      client: "/" + dirs[i],
+      server: __dirname + "/" + dirs[i] + "/"
+    };
+  };
+
+  var fw = new Fw({
+    load: "app/start",
+    loadOnConnect: "app/connected",
+    requireAuth: false,
+    session: false,
+    dirs: dirs,
+    css: ["app/style.css"]
+  });
+  fw.listen(program.port || 8080);
+  
+  var server = require "./app/server";
+  
+  server.setFileName(program.file);
+  
+  
+}catch(e){
+  console.log(e);
+};
+

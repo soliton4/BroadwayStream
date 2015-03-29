@@ -1,0 +1,32 @@
+{
+  "name": "broadway-stream",
+  "version": "0.0.1",
+  "author": {
+    "name": "Matthias Behrens",
+    "email": "matthias.behrens@gmail.com"
+  },
+  "description": "simple stream a local file and render it with Broadway.js",
+  "main": "./index.js"
+  , "dependencies" : {
+    "promiseland": "0.0.22",
+    "promiseland-webframework":  "0.1.11",
+    "commander": "*"
+  },  
+  "keywords": [
+    "Broadway"
+    , "h264"
+    , "libx264"
+    , "video"
+    , "streaming"
+    , "video player"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soliton4/BroadwayStream"
+  },
+  "license": "lgpl",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "readmeFilename": "README.md"
+}

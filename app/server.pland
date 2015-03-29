@@ -1,0 +1,91 @@
+
+var fileName;
+
+var isServer;
+var spawn;
+() exclusive "server"{
+  isServer = true;
+  var cp = require "child_process";
+  spawn = cp.spawn;
+}();
+
+class type sync serve all Stream {
+  constructor: (parFilename){
+    this.filename = parFilename;
+  },
+    
+  var filename: ,
+    
+  var start() {
+    console.log("start executed");
+    if (isServer){
+      console.log("starting stream");
+      try{
+        
+        //ffmpeg  -y -i ../../Videos/Douglas Crockford - Syntaxation ( MLOC JS )-9e_oEE72d3U.mp4 -r 30000/1001 -b:a 2M -bt 4M -vcodec libx264 -pass 1 -coder 0 -bf 0 -flags -loop -wpredp 0 -an -f h264 -
+        
+        var params = ["-y", "-i", this.filename, "-r", "30000/1001", "-b:a", "2M", "-bt", "4M", "-vcodec", "libx264", "-pass", "1", "-coder", "0", "-bf", "0", "-flags", "-loop", "-wpredp", "0", "-an", "-f", "h264", "-"];
+        
+        var x = "";
+        var i = 0;
+        for (i = 0; i < params.length; ++i){
+          x += " ";
+          x += params[i];
+        };
+        console.log("ffmpeg " + x);
+        
+        this.process = spawn("ffmpeg", params);
+        this.stream = this.process.stdout;
+        
+        Stream self = this;
+        this.stream.on("data", function(data){
+          //console.log("streamdata");
+          if (!(data && data.length)){
+            return;
+          };
+          self.streamData(data.toString('base64'));
+        });
+        stream.on("error", function(err){
+          console.log("some stream error");
+          console.log(err);
+        });
+      }catch(e){
+        console.log(e);
+      };
+    };
+    
+  },
+    
+    
+  var streamData(data){
+    if (!isServer){
+      //console.log(data);
+    };
+    if (this.cb){
+      this.cb(data);
+    };
+  }
+};
+
+
+Stream* getStream() frame "server" {
+  return new Stream(filename);
+};
+
+Stream local;
+
+var server = {
+  
+  startStreaming: (parCb){
+    local = *getStream();
+    local.cb = parCb;
+    local.start();
+  },
+  
+  setFileName: (parFilename){
+    filename = parFilename;
+  }
+  
+};
+
+return server;
