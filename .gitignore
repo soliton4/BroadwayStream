@@ -1,0 +1,5 @@
+node_modules
+release
+tempstuff
+./*.log
+av2pass*
