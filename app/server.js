@@ -14,15 +14,14 @@ var __requireFun = function(parModule){
         }, function(err){ returnPromise.reject(err); });
       }catch(e){ returnPromise.reject(e); };
       return returnPromise.promise;};
-    if (promiseland._hasModule({ hashStr: "5dfb761f6f9f7a18826904ff284db2fe" })){ return promiseland._getModule("5dfb761f6f9f7a18826904ff284db2fe"); };
+    if (promiseland._hasModule({ hashStr: "bdf80e2032ed87310498fe5446b832c9" })){ return promiseland._getModule("bdf80e2032ed87310498fe5446b832c9"); };
 var PL$18/*console*/;try{PL$18/*console*/ = console;}catch(e){};
-var PL$24/*stream*/;try{PL$24/*stream*/ = stream;}catch(e){};
-var PL$32/*filename*/;try{PL$32/*filename*/ = filename;}catch(e){};
+var PL$31/*filename*/;try{PL$31/*filename*/ = filename;}catch(e){};
 var PL$1 = (function(){
 "use strict";
 var PL$3/*Stream*/;
-var PL$34/*local*/;
-var _TPL$34/*local*/;
+var PL$33/*local*/;
+var _TPL$33/*local*/;
 
 /* ---------------------------- */
 /* type Stream */
@@ -41,8 +40,8 @@ var PL$7/*Stream*-constructor*/ = undefined;classSystem.readyPromise(PL$5/*type:
 });
 /* ---------------------------- */
 
-var PL$27/*getStream*/ = (function(f){
-promiseland.registerRemote("server", "5dfb761f6f9f7a18826904ff284db2fe", "PL$33", f, (classSystem.createFunctionType({ "return": PL$5/*type:Stream**/, arguments: []})));
+var PL$26/*getStream*/ = (function(f){
+promiseland.registerRemote("server", "bdf80e2032ed87310498fe5446b832c9", "PL$32", f, (classSystem.createFunctionType({ "return": PL$5/*type:Stream**/, arguments: []})));
 if (promiseland.profileHas("server")){
 return function(){
 var i = 0; var l = arguments.length; var newArgs = [undefined];
@@ -51,28 +50,28 @@ return f.apply(this, newArgs);
 };
 }else{
 return function(){
-return promiseland.remoteExec("5dfb761f6f9f7a18826904ff284db2fe", "PL$33", arguments);
+return promiseland.remoteExec("bdf80e2032ed87310498fe5446b832c9", "PL$32", arguments);
 }
 };
-})((function(t){return t;})(function (PL$28/*session*/){
-var PL$29;
-var _TPL$29;
-(function(){ var vAr = new PL$7/*Stream*-constructor*/(); PL$29 = vAr[0]; _TPL$29 = vAr[1]; })();var PL$30/*promiseland exception catcher*/ = function(code){
+})((function(t){return t;})(function (PL$27/*session*/){
+var PL$28;
+var _TPL$28;
+(function(){ var vAr = new PL$7/*Stream*-constructor*/(); PL$28 = vAr[0]; _TPL$28 = vAr[1]; })();var PL$29/*promiseland exception catcher*/ = function(code){
   return function(res){
     try{ code(res); }catch(e){
-      PL$29.reject(e);
+      PL$28.reject(e);
     };
   };
 };
-var PL$31/*catch rejected*/ = function(e){
-  PL$29.reject(e);
+var PL$30/*catch rejected*/ = function(e){
+  PL$28.reject(e);
 };
-PL$30/*promiseland exception catcher*/(function(){
+PL$29/*promiseland exception catcher*/(function(){
 
   ;
-  PL$29.resolve(new PL$4/*Stream-constructor*/(PL$32/*filename*/)); return;
-  PL$29.resolve(); return;
-})();return [PL$29, _TPL$29];
+  PL$28.resolve(new PL$4/*Stream-constructor*/(PL$31/*filename*/)); return;
+  PL$28.resolve(); return;
+})();return [PL$28, _TPL$28];
 }));
 
   ;
@@ -110,7 +109,7 @@ PL$30/*promiseland exception catcher*/(function(){
     ;
   })();return PL$11;
   })();
-  classSystem._resolveProvisional(PL$2/*type:Stream*/, classSystem.createClass({className: "Stream",members: [{"name":"constructor","type":classSystem.getBuiltinType("var")},{"name":"filename","type":classSystem.getBuiltinType("var")},{"name":"start","type":(classSystem.createFunctionType({ "return": classSystem.getBuiltinType("var"), arguments: []}))},{"name":"streamData","type":(classSystem.createFunctionType({ "return": classSystem.getBuiltinType("var"), arguments: [classSystem.getBuiltinType("var")]}))}], "extends": [], "hasFreePart": true, "sync": {"type":"sync","all":1,"serve":1,"line":12,"column":12,"offset":156}, "hashStr": "5dfb761f6f9f7a18826904ff284db2fe", "name": "Stream"}, {"constructor": (function(PL$17/*parFilename*/){
+  classSystem._resolveProvisional(PL$2/*type:Stream*/, classSystem.createClass({className: "Stream",members: [{"name":"constructor","type":classSystem.getBuiltinType("var")},{"name":"filename","type":classSystem.getBuiltinType("var")},{"name":"start","type":(classSystem.createFunctionType({ "return": classSystem.getBuiltinType("var"), arguments: []}))},{"name":"streamData","type":(classSystem.createFunctionType({ "return": classSystem.getBuiltinType("var"), arguments: [classSystem.getBuiltinType("var")]}))}], "extends": [], "hasFreePart": true, "sync": {"type":"sync","all":1,"serve":1,"line":12,"column":12,"offset":156}, "hashStr": "bdf80e2032ed87310498fe5446b832c9", "name": "Stream"}, {"constructor": (function(PL$17/*parFilename*/){
   
     ;
     (function(s, v){ v = s[10](v); s[9] = v; return v; })(this, PL$17/*parFilename*/);
@@ -177,82 +176,88 @@ PL$30/*promiseland exception catcher*/(function(){
         this[5]["stream"]["on"]("data", (function(PL$23/*data*/){
         
           ;
-          if(! (PL$23/*data*/ && PL$23/*data*/["length"])){
-            return;
-          };
+          try
+          {
+            if(! (PL$23/*data*/ && PL$23/*data*/["length"])){
+              return;
+            };
+            ;
+            PL$22/*self*/[13](PL$23/*data*/["toString"]("base64"));}catch(PL$24/*e*/){};
           ;
-          PL$22/*self*/[13](PL$23/*data*/["toString"]("base64"));
           ;}));
-        PL$24/*stream*/["on"]("error", (function(PL$25/*err*/){
+        this[5]["stream"]["on"]("error", (function(PL$25/*err*/){
         
           ;
           PL$18/*console*/["log"]("some stream error");
           PL$18/*console*/["log"](PL$25/*err*/);
-          ;}));}catch(PL$26/*e*/){
-        PL$18/*console*/["log"](PL$26/*e*/);};
+          ;}));}catch(PL$24/*e*/){
+        PL$18/*console*/["log"](PL$24/*e*/);};
       ;
     };
     ;
     if (_TPL$22/*self*/){ _TPL$22/*self*/();};}catch(e){if (_TPL$22/*self*/){ _TPL$22/*self*/();};throw e};;}), "streamData": (function(PL$23/*data*/){
   
     ;
-    if(! PL$9/*isServer*/){
-    };
-    ;
-    if(this[5]["cb"]){
-      this[5]["cb"](PL$23/*data*/);
-    };
+    try
+    {
+      if(! PL$9/*isServer*/){
+      };
+      ;
+      if(this[5]["cb"]){
+        this[5]["cb"](PL$23/*data*/);
+      };
+      ;}catch(PL$24/*e*/){};
     ;
     ;})}));PL$3/*Stream*/;
   /* function getStream (){} - hoisted */;
   ;
-  PL$34/*local*/;
-  var PL$35/*server*/ = {
-    "startStreaming": (function(PL$36/*parCb*/){
-    var PL$37 = new __Promise();
-    var PL$39/*promiseland exception catcher*/ = function(code){
+  PL$33/*local*/;
+  var PL$34/*server*/ = {
+    "startStreaming": (function(PL$35/*parCb*/){
+    var PL$36 = new __Promise();
+    var PL$38/*promiseland exception catcher*/ = function(code){
       return function(res){
         try{ code(res); }catch(e){
-          PL$37.reject(e);
+          PL$36.reject(e);
         };
       };
     };
-    var PL$40/*catch rejected*/ = function(e){
-      PL$37.reject(e);
+    var PL$39/*catch rejected*/ = function(e){
+      PL$36.reject(e);
     };
-    PL$39/*promiseland exception catcher*/(function(){
+    PL$38/*promiseland exception catcher*/(function(){
     
       ;
       /*temptracked promise*/(function(vAr){
-      var r = vAr[0].thenReuse(vAr[1], PL$39/*promiseland exception catcher*/(function(PL$41){/*temp tracked assign*/(function(vAr){
-        if (_TPL$34/*local*/){ _TPL$34/*local*/(); };
+      var r = vAr[0].thenReuse(vAr[1], PL$38/*promiseland exception catcher*/(function(PL$40){/*temp tracked assign*/(function(vAr){
+        if (_TPL$33/*local*/){ _TPL$33/*local*/(); };
         if(vAr){
           var v = vAr[0];
-          PL$34/*local*/ = v;
-          _TPL$34/*local*/ = vAr[1];
+          PL$33/*local*/ = v;
+          _TPL$33/*local*/ = vAr[1];
           return v;
         }else{
-          PL$34/*local*/ = undefined; 
-          _TPL$34/*local*/ = undefined;
+          PL$33/*local*/ = undefined; 
+          _TPL$33/*local*/ = undefined;
           return;
         };
-      })(PL$41)/*end temp assign*/;
-      PL$34/*local*/[5]["cb"] = PL$36/*parCb*/;
-      PL$34/*local*/[11]();
-      PL$37.resolve(); return;}), PL$40/*catch rejected*/);
+      })(PL$40)/*end temp assign*/;
+      PL$33/*local*/[5]["cb"] = PL$35/*parCb*/;
+      PL$33/*local*/[11]();
+      PL$36.resolve(); return;}), PL$39/*catch rejected*/);
       return r;
-      })(PL$27/*getStream*/());/*temptracked promise end*/
+      })(PL$26/*getStream*/());/*temptracked promise end*/
       ;
-    })();return PL$37;
+    })();return PL$36;
     }),
     "setFileName": (function(PL$17/*parFilename*/){
     
       ;
-      PL$32/*filename*/ = PL$17/*parFilename*/;
+      PL$31/*filename*/ = PL$17/*parFilename*/;
       ;})
   };
   ;
-  return PL$35/*server*/;
+  return PL$34/*server*/;
   ;})();
 ;return PL$1;
 };

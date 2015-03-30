@@ -39,13 +39,14 @@ class type sync serve all Stream {
         
         Stream self = this;
         this.stream.on("data", function(data){
-          //console.log("streamdata");
-          if (!(data && data.length)){
-            return;
-          };
-          self.streamData(data.toString('base64'));
+          try{
+            if (!(data && data.length)){
+              return;
+            };
+            self.streamData(data.toString('base64'));
+          }catch(e){};
         });
-        stream.on("error", function(err){
+        this.stream.on("error", function(err){
           console.log("some stream error");
           console.log(err);
         });
@@ -58,12 +59,14 @@ class type sync serve all Stream {
     
     
   var streamData(data){
-    if (!isServer){
-      //console.log(data);
-    };
-    if (this.cb){
-      this.cb(data);
-    };
+    try{
+      if (!isServer){
+        //console.log(data);
+      };
+      if (this.cb){
+        this.cb(data);
+      };
+    }catch(e){};
   }
 };
 
